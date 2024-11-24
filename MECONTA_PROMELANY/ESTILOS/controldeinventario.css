@@ -1,0 +1,154 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Barra superior */
+.top-bar {
+    width: 100%;
+    height: 11vh; /* Altura relativa a la ventana */
+    background-color: #0D3232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%; /* Margen interno lateral */
+}
+
+.left-text {
+    font-size: 5vh; /* Tamaño de texto relativo */
+    color: #fff;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section span {
+    margin-right: 1vw; /* Espacio entre el texto y el botón */
+    font-size: 2.5vh;
+    color: #fff;
+    position: relative;
+    left: 35%;
+}
+
+.image-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 10vw;
+    
+}
+
+.user-card {
+    position: fixed;
+    top: 20vh; /* Ajustar la posición según el diseño */
+    right: 2vw; /* Siempre pegado al lado derecho */
+    background-color: #0D3232;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2vh 2vw; /* Aumenta el padding para mejorar la apariencia */
+    width: 25vw; /* Ajusta el ancho de la tarjeta */
+    max-width: 300px; /* Ancho máximo para pantallas grandes */
+    display: none; /* Oculta por defecto */
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: all 0.3s ease; /* Suaviza la transición al mostrar */
+}
+
+.user-name, .user-time {
+    font-size: 2.5vh; /* Tamaño adaptable del texto */
+    margin: 0.5em 0;
+    color: white;
+    width: 100%; /* Asegura que el texto ocupe el ancho completo */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.logout-action-btn {
+    background-color: #1A5276;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1vh 2vw; /* Ajusta el padding para adaptarlo */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Botón ocupa el ancho completo de la tarjeta */
+    font-size: 2vh; /* Tamaño adaptable del texto del botón */
+}
+
+.logout-action-btn:hover {
+    background-color: #154360;
+}
+
+@media (max-width: 768px) {
+    .user-card {
+        width: 80vw; /* Ajusta el ancho de la tarjeta en pantallas más pequeñas */
+        max-width: none; /* Remueve el máximo ancho para pantallas pequeñas */
+        top: 15vh; /* Cambia la posición si es necesario en pantallas pequeñas */
+    }
+
+    .user-name, .user-time {
+        font-size: 3vh; /* Aumenta el tamaño del texto en pantallas pequeñas */
+    }
+
+    .logout-action-btn {
+        font-size: 2.5vh; /* Aumenta el tamaño del texto del botón en pantallas pequeñas */
+    }
+}
+.image-btn img {
+    width: 35%; /* Tamaño relativo al ancho de la ventana */
+    height: auto;
+    position: relative;
+    left: 30%;
+   
+}
+
+/* Barra inferior */
+.bottom-bar {
+    width: 100%;
+    height: 7vh; /* Altura fija */
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 1.5%;
+}
+
+.banner-content .icon {
+    width: 3vw; /* 5% del ancho de la ventana */
+    height: auto; /* Mantener la proporción de la imagen */
+    
+}
+
+
+.banner-content p {
+    font-size: 3vh;
+    color: #fff;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 850px) {
+    .left-text, .right-section span {
+        font-size: 3vh;
+    }
+    
+    .right-section span {
+        margin-right: 1vw; /* Espacio entre el texto y el botón */
+        font-size: 2.5vh;
+        color: #fff;
+        position: relative;
+        left: 30%;
+    }
+    
+   
+}
